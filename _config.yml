@@ -1,0 +1,12 @@
+# Site settings
+title: K G P . C P A
+email: info@kgpcpa.com
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+markdown: kramdown
+
+tel: "+1-415-957-9200"
+map_url: "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Katy+G+Pletter,+CPA&aq=&sll=37.788911,-122.399909&sspn=0.036832,0.04622&vpsrc=0&ie=UTF8&hq=&hnear=&t=m&z=17&iwloc=A&cid=4929329112073577236"
