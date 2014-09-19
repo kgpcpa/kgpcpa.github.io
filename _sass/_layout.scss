@@ -1,8 +1,8 @@
 /**
  * Site header
  */
-.site-header {
-    min-height: 56px;
+#site-header {
+    
     background: transparent;
     //background-color: $brand-color;
     // Positioning context for the mobile navigation icon
@@ -10,7 +10,180 @@
     z-index: 200;
     right: 0;
     left: 0;
+    -webkit-transition: height .5s, background-color .5s, -webkit-transform .5s;
+    transition:height .5s, background-color .5s, transform .5s;
+
+
+
+    .site-nav {
+        float: right;
+        margin: 0;
+        font-size: 12px;
+        
+        a {
+            color: #fff;
+        }
+
+        li {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            list-style: none;
+
+            ul {
+                position: absolute;
+                display: block;
+                margin: 0;
+                padding: 0;
+                
+                li {
+                    padding: 0;
+                    margin: 0;
+                    display: block;
+                    line-height: 1.8;
+                }
+            }
+
+        }        
+    }
+
+
+    .sub-menu {
+        -webkit-transition: height .5s, background-color .5s, -webkit-transform .5s;
+        transition:height .5s, background-color .5s, transform .5s;
+    }
+
+
+    .menu-logo {
+        margin-top: 20px;
+        display: none;
+        float: left;
+        background-image: url($image-root + '/kgpcpa-logo-small.png');
+        width: 126px;
+        height: 82px;
+        overflow: hidden;
+        text-indent: -999px;
+    }
+
+    .menu-icon {
+        margin-top: 20px;
+        display: none;
+        float: right;
+        width: 30px;
+        height: 26px;
+        line-height: 0;
+        padding-top: 10px;
+        text-align: center;
+        background-image: url($image-root + '/icons/menu.png');
+        text-indent: -9999px;
+        overflow: hidden;
+        cursor: pointer;
+
+    } 
+
+    &.fixed {
+        background-color: $header-bg-color;
+
+        .sub-menu {
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .menu-logo {
+            display: block;
+        }
+
+    }   
+
+    @media screen and (max-width: 767px) {
+        
+        .wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &.active {
+            background-color: $header-bg-color;
+
+            .menu-logo {
+                display: block;
+            }
+
+            .menu-icon {
+                background-position: 0 -50px; 
+            }
+
+            .site-nav {
+                display: block;
+            }
+
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .site-nav {
+            display: none;
+            font-size: 22px;
+            width: 100%;
+            margin-top: 60px;
+            margin-bottom: 30px;
+
+            .sub-menu {
+                display: none;
+            }
+
+            li {
+                padding: 0;
+                margin: 0 0 10px 0;
+                display: block;
+
+                a {
+                    display: block;
+                    border-bottom: 1px solid #4abab9;
+                    padding: 5px 0 10px;
+                    line-height: 2;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 100;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+            } 
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &.fixed {
+            background-color: $header-bg-color;
+
+            .sub-menu {
+                height: 0px;
+                overflow: hidden;
+            }
+
+            .menu-logo {
+                display: block;
+            }
+
+        }  
+    }
+
 }
+
+
+
+
 
 
 .site-sub-header {
@@ -39,7 +212,7 @@
         padding-top: 220px;
         text-align: left;
         background-repeat: no-repeat;
-        background-image: url($image-root + '/backgrounds/kgpcpa-logo.png');
+        background-image: url($image-root + '/kgpcpa-logo.png');
 
         h1, h2 {
             font-size: 20px;
@@ -72,37 +245,9 @@
     }
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
 
-    a {
-        color: #fff;
-        font-size: 12px;
-    }
 
-    li {
-        display: inline-block;
-        padding: 10px;
-        margin: 10px;
-        list-style: none;
 
-        ul {
-            position: absolute;
-            display: block;
-            margin: 0;
-            padding: 0;
-            li {
-                padding: 0;
-                margin: 0;
-                display: block;
-                line-height: 1.8;
-            }
-        }
-
-    }
-
-}
 
 
 

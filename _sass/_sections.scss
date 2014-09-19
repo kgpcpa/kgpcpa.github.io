@@ -3,7 +3,7 @@
 
 .section {
   overflow: hidden;
-  padding: 150px 0;
+  padding: 125px 0;
   background-color: $background-color;
   background-position: top center;
   background-repeat: no-repeat;
@@ -13,12 +13,13 @@
   }
 
   &#about {
-    background-image: url($image-root + '/backgrounds/katy-drawing.png');
+    background-image: url($image-root + '/backgrounds/dots.png');
   }
 
 
   h3 {
     font-size: 30px;
+    color: $brand-color;
   }
 
   @media screen and (min-width: $on-laptop) {
@@ -42,7 +43,12 @@
 
   &.inverse {
     background-color: $background-color-inverse;
-    color: $text-color-inverse
+    color: $text-color-inverse;
+
+    h3 {
+      color: $text-color-inverse;
+    }
+
   }
 
 
