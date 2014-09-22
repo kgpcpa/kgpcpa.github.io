@@ -18,8 +18,9 @@
     .site-nav {
         float: right;
         margin: 0;
-        font-size: 12px;
-        
+        transition: margin-top  .5s ease-in;
+        -webkit-transition: margin-top  .5s ease-in;
+
         a {
             color: #fff;
         }
@@ -29,18 +30,21 @@
             padding: 10px;
             margin: 10px;
             list-style: none;
+            font-size: 14px;
+            text-transform: uppercase;
 
             ul {
                 position: absolute;
                 display: block;
-                margin: 0;
+                margin: 10px 0 0 0;
                 padding: 0;
-                
+
                 li {
                     padding: 0;
                     margin: 0;
                     display: block;
-                    line-height: 1.8;
+                    line-height: 2.5;
+                    text-transform: none;
                 }
             }
 
@@ -83,6 +87,11 @@
 
     &.fixed {
         background-color: $header-bg-color;
+        
+        .site-nav {
+            size: 14px;
+            margin-top: 20px;
+        }
 
         .sub-menu {
             height: 0px;
@@ -178,7 +187,6 @@
 
         }  
     }
-
 }
 
 
@@ -196,11 +204,6 @@
     right: 0;
     left: 0;
     text-align: center;
-
-
-    @media screen and (min-width: 1028px) {
-      background-size: 100%;
-    }
 
     .inner {
         padding: 150px 0;
@@ -220,6 +223,16 @@
             text-transform: uppercase;
             font-family: $secondary-font-family;
             font-weight: 100;
+        }
+    }
+
+    @media screen and (min-width: 1028px) {
+      background-size: 100%;
+    }
+
+    @media screen and (max-width: 767px) { 
+        .inner {
+            padding: 65px 0;
         }
     }
 
