@@ -4,8 +4,6 @@
 #site-header {
     
     background: transparent;
-    //background-color: $brand-color;
-    // Positioning context for the mobile navigation icon
     position: fixed;
     z-index: 200;
     right: 0;
@@ -36,7 +34,7 @@
             ul {
                 position: absolute;
                 display: block;
-                margin: 10px 0 0 0;
+                margin: 20px 0 0 0;
                 padding: 0;
 
                 li {
@@ -62,11 +60,18 @@
         margin-top: 20px;
         display: none;
         float: left;
-        background-image: url($image-root + '/kgpcpa-logo-small.png');
         width: 126px;
         height: 82px;
-        overflow: hidden;
-        text-indent: -999px;
+        
+        
+        a {
+            background-image: url($image-root + '/kgpcpa-logo-small.png');
+            display: block;
+            width: 126px;
+            height: 82px;
+            text-indent: -999px;
+            overflow: hidden;
+        }
     }
 
     .menu-icon {
@@ -197,6 +202,7 @@
 .site-sub-header {
     background-position: top center;
     background-repeat: no-repeat;
+    background-color: $background-color-inverse;
     background-image: url($image-root + '/backgrounds/cliffhouse.jpg');
     height: 797px;
     position: fixed;
@@ -205,8 +211,22 @@
     left: 0;
     text-align: center;
 
+    &.bg-1 {
+        background-image: url($image-root + '/backgrounds/victorians1.jpg');
+    }
+    &.bg-2 {
+        background-image: url($image-root + '/backgrounds/ferry2.jpg');   
+    }
+    &.bg-3 {
+        background-image: url($image-root + '/backgrounds/ferry3.jpg');
+    }
+    &.bg-4 {
+        background-image: url($image-root + '/backgrounds/cliffhouse.jpg');
+    }
+
+
     .inner {
-        padding: 150px 0;
+        padding: 180px 0;
     }
 
     .logo {
@@ -221,8 +241,9 @@
             font-size: 20px;
             color: #fff;
             text-transform: uppercase;
-            font-family: $secondary-font-family;
+            //font-family: $secondary-font-family;
             font-weight: 100;
+            white-space: nowrap;
         }
     }
 
