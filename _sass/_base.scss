@@ -76,6 +76,14 @@ li {
     }
 }
 
+ul.bulleted, 
+ol.bulleted {
+    li {
+        list-style: none;
+        background: url($image-root + '/icons/bullet.png') 0 center no-repeat;
+        padding-left: 30px;
+    }
+}
 
 
 /**
