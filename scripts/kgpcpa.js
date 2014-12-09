@@ -134,6 +134,14 @@ $(function() {
 
   });
 
+  // var containerElement = document.getElementById('scroll-container');
+
+  // var scroller = new FTScroller(containerElement, {
+  //     scrollbars: true,
+  //     bouncing: false
+  // });
+
+
 
   window.addEventListener('resize', 
     debounce(

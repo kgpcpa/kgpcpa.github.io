@@ -4,15 +4,18 @@
   {% include head.html %}
 
   <body>
+    <div id="scroll-container">
 
-    {% include header.html %}
-    
-    <div class="site-body">    
-      {{ content }}
+      {% include header.html %}
+      
+      <div class="site-body">    
+        {{ content }}
+      </div>
+
+      {% include footer.html %}
+
     </div>
-
-    {% include footer.html %}
-
+  
   </body>
 
 </html>
