@@ -15,12 +15,26 @@ function debounce(func, wait, immediate) {
 
 
 function applyPadding() {
-  var padding,
+
+  var padding, 
+      bodyOffset,
+      wHeight = $(window).height(),
       section = $('.site-body .section:last'),
       menu = $('#site-header'),
       push = $('#push');
 
-  padding = (($(window).height() - menu.outerHeight()) - section.outerHeight());
+
+  if (wHeight < 400 ) {
+    bodyOffset = 400;
+  } else if (wHeight > 797) {
+    bodyOffset = 797;
+  } else {
+    bodyOffset = wHeight;
+  }
+
+  $('.site-body').css('top', bodyOffset);
+
+  padding = ((wHeight - menu.outerHeight()) - section.outerHeight());
 
   if (padding > 0) {
     push.css('height', padding + 'px');
@@ -35,6 +49,34 @@ function updateUrl( anchor ) {
     }, '', window.location.pathname + anchor );
   }
 };
+
+
+function activateSection(scrollTop) {
+  scrollTop = scrollTop + $('#site-header').height();
+
+  $('a.scroll').each(function () {
+    var sectionId = $(this).attr("href");
+
+    if (sectionId === "#") {
+      return;
+    }
+    
+    var section = $(sectionId),
+        sTop    = section.offset().top;
+    
+    if (sTop <= scrollTop && sTop + section.outerHeight() > scrollTop) {
+      var outstanding = $('a.scroll.active')[0];
+
+      if (outstanding && outstanding !== this) {
+        $(outstanding).removeClass("active");
+      }
+      
+      $(this).addClass("active");
+    } else {
+      $(this).removeClass("active");
+    }
+  });
+}
 
 
 function scrollToSection(context, section) {
@@ -87,7 +129,9 @@ $(function() {
     } else {
         $("#site-header").removeClass("fixed");
     }
-  
+    
+    activateSection(scroll);
+
   });
 
 

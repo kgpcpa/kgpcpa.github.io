@@ -21,6 +21,10 @@
 
         a {
             color: #fff;
+
+            &.active {
+                text-decoration: underline;
+            }
         }
 
         li {
