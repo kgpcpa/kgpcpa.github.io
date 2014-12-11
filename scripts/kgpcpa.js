@@ -24,10 +24,8 @@ function applyPadding() {
       push = $('#push');
 
 
-  if (wHeight < 400 ) {
-    bodyOffset = 400;
-  } else if (wHeight > 797) {
-    bodyOffset = 797;
+  if (wHeight > 645) {
+    bodyOffset = 645;
   } else {
     bodyOffset = wHeight;
   }
@@ -124,7 +122,7 @@ $(function() {
   $(window).scroll( function() {
     var scroll = $(this).scrollTop();
     
-    if (scroll >= 600) {
+    if (scroll >= 500) {
         $("#site-header").addClass("fixed");
     } else {
         $("#site-header").removeClass("fixed");

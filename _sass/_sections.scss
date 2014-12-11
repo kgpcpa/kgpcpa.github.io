@@ -18,20 +18,9 @@
   }
 
   li {
-    line-height: 2.5;
+    line-height: 1.5;
   }
 
-  @media screen and (min-width: $on-laptop) {
-    .col {
-      float: left;
-      width: 50%;
-    }
-
-    .col + .col {
-      margin-left: -$center-offset;
-    }
-
-  }
 
   .section-title {
     font-size: 15px;
@@ -67,11 +56,19 @@
     width: 361px;
   }
 
-  @media screen and (max-width: 767px) { 
+  @media screen and (max-width: $on-laptop) { 
     padding: 30px 0;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $on-laptop) {
+    .col {
+      float: left;
+      width: 50%;
+    }
+
+    .col + .col {
+      margin-left: -$center-offset;
+    }
 
     .section-title {
       font-size: 15px;
