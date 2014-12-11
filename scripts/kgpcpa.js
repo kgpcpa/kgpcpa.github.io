@@ -1,3 +1,6 @@
+var splashCount = 6;
+
+
 function debounce(func, wait, immediate) {
   var timeout;
   return function() {
@@ -113,7 +116,7 @@ function updateHeader(state) {
 $(function() {
   applyPadding();
 
-  var bgNum = Math.floor(Math.random() * 4) + 1;
+  var bgNum = Math.floor(Math.random() * splashCount) + 1;
 
   $('.site-sub-header').addClass('bg-' + bgNum);
 

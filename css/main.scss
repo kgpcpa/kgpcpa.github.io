@@ -50,6 +50,8 @@ $center-offset: 140px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "base",
-  "header",
+  "site-header",
+  "site-sub-header",
   "sections"
+
 ;
