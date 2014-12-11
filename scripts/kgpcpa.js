@@ -14,7 +14,7 @@ function debounce(func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
-};
+}
 
 
 function applyPadding() {
@@ -40,7 +40,7 @@ function applyPadding() {
   if (padding > 0) {
     push.css('height', padding + 'px');
   }
-};
+}
 
 
 function updateUrl( anchor ) {
@@ -49,7 +49,7 @@ function updateUrl( anchor ) {
       pos: anchor.id
     }, '', window.location.pathname + anchor );
   }
-};
+}
 
 
 function activateSection(scrollTop) {
@@ -88,8 +88,8 @@ function scrollToSection(context, section) {
         base_speed  = 300,
         speed       = (offset_diff * base_speed) / 1000;
         
-    animateScrollTo(that_offset.top - headHeight, speed)
-};
+    animateScrollTo(that_offset.top - headHeight, speed);
+}
 
 
 function animateScrollTo(position, speed) {
@@ -147,7 +147,7 @@ $(function() {
   window.addEventListener('resize', 
     debounce(
       function() {
-        applyPadding()
+        applyPadding();
       }, 
       250
     )
@@ -164,7 +164,7 @@ $(function() {
 
     var href = $(this).attr("href");
 
-    updateUrl(href)
+    updateUrl(href);
 
     if (href === "#") {
       updateHeader();
