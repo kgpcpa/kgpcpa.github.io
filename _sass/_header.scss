@@ -22,12 +22,9 @@
         a {
             color: #fff;
 
-            &.active {
-                text-decoration: underline;
-            }
-
-            &:hover,
-            &:focus {
+    
+            &.active,
+            &:hover {
                 color: $text-hover-color;
                 text-decoration: none;
             }
