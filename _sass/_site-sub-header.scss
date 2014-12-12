@@ -1,8 +1,10 @@
 .site-sub-header {
+    //height of the background images;
+    // inital state is large.
+    height: 645px;
     background-position: top center;
     background-repeat: no-repeat;
     background-color: $background-color-inverse;
-    height: 645px;
     position: fixed;
     top: 0;
     right: 0;
@@ -36,6 +38,8 @@
     }
 
     @include media-small {
+        //height of the background images;
+        height: 500px;
 
         @include splash-for('palm');
 

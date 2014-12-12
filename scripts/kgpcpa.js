@@ -22,13 +22,15 @@ function applyPadding() {
   var padding, 
       bodyOffset,
       wHeight = $(window).height(),
+      subHeadHeight = $('.site-sub-header').outerHeight(),
       section = $('.site-body .section:last'),
       menu = $('#site-header'),
       push = $('#push');
 
 
-  if (wHeight > 645) {
-    bodyOffset = 645;
+
+  if (wHeight > subHeadHeight) {
+    bodyOffset = subHeadHeight;
   } else {
     bodyOffset = wHeight;
   }
