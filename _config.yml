@@ -7,3 +7,6 @@ url: "http://yourdomain.com"
 tel: "415.957.9200"
 fax: "415.449.6199"
 map_url: "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Katy+G+Pletter,+CPA&aq=&sll=37.788911,-122.399909&sspn=0.036832,0.04622&vpsrc=0&ie=UTF8&hq=&hnear=&t=m&z=17&iwloc=A&cid=4929329112073577236"
+
+sass:
+  style: compressed
