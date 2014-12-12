@@ -11,8 +11,6 @@
     -webkit-transition:height .5s, background-color .5s, -webkit-transform .5s;
     transition:height .5s, background-color .5s, transform .5s;
 
-
-
     .site-nav {
         float: right;
         margin: 0;
@@ -64,9 +62,8 @@
                 }
             }
 
-        }        
+        }
     }
-
 
     .sub-menu {
         -webkit-transition: height .5s, -webkit-transform .5s;
@@ -127,7 +124,96 @@
 
     }   
 
-    @media screen and (max-width: $on-laptop - 1) {
+    @include media-small {
+
+        .site-nav {
+            margin-top: 20px;
+        }
+
+        &.fixed {
+            background-color: transparent;
+
+            height: 0;
+        
+            .site-nav {
+                size: 14px;
+                margin-top: 20px;
+            }
+
+            .menu-logo {
+                display: none;
+            }
+
+        }
+
+        .wrapper {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &.active {
+            height: auto;
+
+            background-color: $header-bg-color;
+
+            .menu-logo {
+                display: block;
+            }
+
+            .menu-icon {
+                background-position: 0 -50px; 
+            }
+
+            .site-nav {
+                display: block;
+            }
+
+        }
+
+        .menu-icon {
+            display: block;
+        }
+
+        .site-nav {
+            display: none;
+            font-size: 22px;
+            width: 100%;
+
+            .sub-menu {
+                display: none;
+            }
+
+            li {
+                padding: 0;
+                margin: 0 0 10px 0;
+                display: block;
+
+                a {
+                    display: block;
+                    border-bottom: 1px solid #4abab9;
+                    padding: 5px 0 10px;
+                    line-height: 2;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    font-weight: 100;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-bottom: none;
+                    }
+                }
+            } 
+        }
+    }
+
+
+    @include media-medium {
         
         .wrapper {
             padding-left: 30px;
@@ -195,7 +281,7 @@
         }
     }
 
-    @media screen and (min-width: $on-laptop) {
+    @include media-large {
         &.fixed {
             height: 117px;
             background-color: $header-bg-color;
