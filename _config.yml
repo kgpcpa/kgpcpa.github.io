@@ -10,3 +10,4 @@ map_url: "https://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Katy+G+Pl
 
 sass:
   style: compressed
+  sass_dir: _sass

@@ -20,20 +20,24 @@
     }
 
     .logo {
-        width: 279px;
+        //width: 279px;
         margin: 0 auto;
         padding-top: 220px;
-        text-align: left;
-        background-repeat: no-repeat;
-        background-image: url($image-root + '/kgpcpa-logo.png');
+        text-align: center;
+        background: url($image-root + '/kgpcpa-logo.png') center 0px no-repeat;
+
+        h1 {
+            margin-bottom: 0px;
+        }
 
         h1, h2 {
-            font-size: 24px;
+            font-size: 30px;
             color: #fff;
-            text-transform: uppercase;
             font-family: $secondary-font-family;
             font-weight: 300;
             white-space: nowrap;
+            font-variant: small-caps;
+            text-align: center;
         }
     }
 
@@ -48,15 +52,11 @@
         }
 
         .logo {
-            width: 279px;
-            margin: 0 auto;
-            padding-top: 220px;
-            text-align: left;
-            background-repeat: no-repeat;
-            background-image: url($image-root + '/kgpcpa-logo.png');
-
+            padding-top: 190px;
+            background-size: 80%;
+            
             h1, h2 {
-                font-size: 18px;
+                font-size: 24px;
             }
         }
 
