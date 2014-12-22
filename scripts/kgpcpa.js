@@ -124,7 +124,7 @@ $(function() {
 
   var fixadent = $("#fixadent"), pos = fixadent.offset();
 
-  $(window).scroll( function() {
+  function scroll(){
     var scroll = $(this).scrollTop();
     
     if (scroll >= 500) {
@@ -135,7 +135,11 @@ $(function() {
     
     activateSection(scroll);
 
-  });
+  }
+
+  $(window).scroll(scroll);
+
+  $(window).bind('touchstart', scroll);
 
 
 
