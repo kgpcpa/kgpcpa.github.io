@@ -139,7 +139,17 @@ $(function() {
 
   $(window).scroll(scroll);
 
-  $(window).bind('touchstart', scroll);
+  $(window).bind('touchend', function(){
+    var scroll = $(this).scrollTop();
+
+    if(scroll < 25){
+      setTimeout(function(){
+      window.scrollTo(0, 25);
+      }, 100); 
+      return;
+    }
+
+  });
 
 
 
@@ -174,6 +184,9 @@ $(function() {
     }
   
   });
+
+
+  window.scrollTo(0, 25);
 
 
 });
