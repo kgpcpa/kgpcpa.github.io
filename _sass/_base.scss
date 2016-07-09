@@ -117,7 +117,7 @@ a {
 input {
     border: none;
     height: 2em;
-    width: 20em;
+    width: 100%;
     border-radius: 2px;
     font-size: 1.3em;
     padding-left:.5em;
@@ -128,7 +128,7 @@ table {
 }
 
 input[type=button] {
-    width:102%;
+    width:104%;
     margin-top:10px;
 }
 
